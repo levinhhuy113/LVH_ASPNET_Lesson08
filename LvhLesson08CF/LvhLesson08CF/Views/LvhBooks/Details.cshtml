@@ -1,0 +1,66 @@
+﻿@model LvhLesson08CF.Models.LvhBook
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>LvhBook</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LvhTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LvhTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LvhAuthor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LvhAuthor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LvhYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LvhYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LvhPublisher)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LvhPublisher)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LvhPicture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LvhPicture)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LvhCategoryId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LvhCategoryId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.LvhBookID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

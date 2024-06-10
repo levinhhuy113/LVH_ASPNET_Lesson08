@@ -1,0 +1,63 @@
+﻿@model IEnumerable<LvhLesson08CF.Models.LvhBook>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LvhTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LvhAuthor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LvhYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LvhPublisher)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LvhPicture)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LvhCategoryId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LvhTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LvhAuthor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LvhYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LvhPublisher)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LvhPicture)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LvhCategoryId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.LvhBookID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.LvhBookID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.LvhBookID })
+        </td>
+    </tr>
+}
+
+</table>
